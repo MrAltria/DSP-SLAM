@@ -97,11 +97,11 @@ Once you have set up the dependencies, you can build DSP-SLAM:
 # (assume you are under DSP-SLAM project directory)
 mkdir build
 cd build
-cmake -DPYTHON_LIBRARIES={YOUR_PYTHON_LIBRARY_PATH} \
-      -DPYTHON_INCLUDE_DIRS={YOUR_PYTHON_INCLUDE_PATH} \
-      -DPYTHON_EXECUTABLE={YOUR_PYTHON_EXECUTABLE_PATH} \
+cmake -DPYTHON_LIBRARIES={$conda_env_dir/lib/libpython3.8m.so} \
+      -DPYTHON_INCLUDE_DIRS={$conda_env_dir/include/python3.8m} \
+      -DPYTHON_EXECUTABLE={$conda_env_dir/bin/python3.8} \
       ..
-make -j8
+make -j24
 ```
 
 After successfully building DSP-SLAM, you will have **libDSP-SLAM.so**  at *lib* folder and the executables **dsp_slam** and **dsp_slam_mono** under project root directory.
