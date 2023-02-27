@@ -97,9 +97,9 @@ Once you have set up the dependencies, you can build DSP-SLAM:
 # (assume you are under DSP-SLAM project directory)
 mkdir build
 cd build
-cmake -DPYTHON_LIBRARIES={$conda_env_dir/lib/libpython3.8m.so} \
-      -DPYTHON_INCLUDE_DIRS={$conda_env_dir/include/python3.8m} \
-      -DPYTHON_EXECUTABLE={$conda_env_dir/bin/python3.8} \
+cmake -DPYTHON_LIBRARIES={/home/bopang/anaconda3/envs/pytorch3d/lib/libpython3.8m.so} \
+      -DPYTHON_INCLUDE_DIRS={/home/bopang/anaconda3/envs/pytorch3d/include/python3.8m} \
+      -DPYTHON_EXECUTABLE={/home/bopang/anaconda3/envs/pytorch3d/bin/python3.8} \
       ..
 make -j24
 ```
